@@ -1,0 +1,127 @@
+
+
+.timeline-item {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-bottom: 24px;
+}
+
+.timeline-item-body {
+  flex: 1 1 auto;
+  width: calc(100% - 72px);
+  position: relative;
+}
+
+.timeline-item-card {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),
+              0 2px 2px 0 rgba(0,0,0,.14),
+              0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.timeline-item-card::after,
+.timeline-item-card::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: auto;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #000;
+  border-left: none;
+  top: calc(50% - 10px);
+}
+
+.timeline-item-card::after {
+  border-right-color: rgb(255, 255, 255);
+}
+
+.timeline-item-card::before {
+  top: calc(50% - 8px);
+  border-right-color: rgba(0,0,0,.12);
+}
+
+.card-text {
+  padding-top: 0;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  color: rgba(0,0,0,.6);
+}
+
+.card-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.card-info {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.timeline-item-divider {
+  position: relative;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  background: #fff;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
+              0 1px 1px 0 rgba(0,0,0,.14),
+              0 1px 3px 0 rgba(0,0,0,.12);
+}
+
+.badge-inner {
+  width: 48px;
+  height: 48px;
+  margin: 2px;
+  background-color: #1867c0;
+  border-radius: 50%;
+}
+
+.badge-inner img {
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+}
+
+.timeline-item-opposite {
+  flex: 1 1 auto;
+  align-self: center;
+  max-width: calc(50% - 48px);
+  text-align: right;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+@media( min-width : 700px) {
+
+  .timeline-item-body {
+    width: auto;
+    max-width: calc(50% - 48px);
+  }
+
+  .timeline-item-divider {
+    margin-right: 0;
+    min-width: 96px;
+  }
+
+  .timeline-item-opposite {
+    display: block;
+  }
+
+}

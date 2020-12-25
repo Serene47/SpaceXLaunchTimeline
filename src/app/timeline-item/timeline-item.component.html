@@ -1,0 +1,36 @@
+
+<div class="timeline-item">
+
+  <div class="timeline-item-body">
+    <div class="timeline-item-card">
+
+      <h2 class="card-title">
+        <span>{{launch.missionName}}</span>
+      </h2>
+
+      <div class="card-info timeline-hide-lg">
+        <span>{{launch.lauchDate |  date:'dd-MM-yyyy hh:mm a' }}</span>
+      </div>
+
+      <div class="card-text">
+        <span>{{launch.missionDetails}}</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="timeline-item-divider">
+    <div class="badge">
+      <div class="badge-inner">
+
+        <img [src]="launch.imageUrl" alt="{{launch.missionName}}">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item-opposite timeline-hide-md">
+    <span>{{launch.lauchDate | date:'dd-MM-yyyy hh:mm a' }}</span>
+  </div>
+
+</div>

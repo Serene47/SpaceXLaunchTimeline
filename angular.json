@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SpaceXLaunchTimeline",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SpaceXLaunchTimeline"
+    }
+  },
+  "defaultProject": "SpaceXLaunchTimeline",
+  "cli": {
+    "analytics": "c0cf9911-1fc1-4c77-aaa3-d656350a54e1"
+  }
 }
